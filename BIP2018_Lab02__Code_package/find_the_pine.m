@@ -8,7 +8,4 @@ function pine = find_the_pine(I)
    pines = logical (sat < 0.2);
    pinev = val > 0.025 & val < 0.95;
    pine  = imfill((pineh | pines) & pinev , 'holes');
-   se = [0 1 0; 1 1 1; 0 1 0];
-   
-   pine = imerode(pine, se);
 end
